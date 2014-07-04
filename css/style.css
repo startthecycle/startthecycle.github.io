@@ -249,6 +249,11 @@ body {
 		height: auto;
 		/*background-position: -70% 0, 170% 0;*/
 	}
+	#slide-1 h1{
+		height: auto;
+		padding-top: 5px;
+		/*background-position: -70% 0, 170% 0;*/
+	}
 }
 
 @media (max-width: 767px) {
