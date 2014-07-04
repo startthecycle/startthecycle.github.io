@@ -241,12 +241,16 @@ body {
 @media (max-width: 991px) {
 	#slide-1 {
 		height: auto;
-		/*background-position: -70% 0, 170% 0;*/
+	}
+	#slide-1 h1 {
+		height: auto;
+		padding-top: 0px;
 	}
 }
 
 @media (max-width: 767px) {
 	#slide-1 {
+
 		/*background-image: none;*/
 	}
 }
