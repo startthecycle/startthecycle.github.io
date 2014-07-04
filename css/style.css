@@ -198,6 +198,9 @@ body {
 	.nav li[data-slide="5"] {
 		background-color: #e67e22;
 	}
+		.nav li[data-slide="7"] {
+		background-color: purple;
+	}
 	
 	.navbar-brand {
 		margin: 0;
