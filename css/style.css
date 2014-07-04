@@ -229,7 +229,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: auto;
 	background-attachment: relative;
 	background-position: center center;
 }
@@ -461,7 +461,7 @@ body {
 	background-color: #2f2f2f;
 	color: #e4e6e5;
 	padding-bottom: 20px;
-	padding-top: 90px;
+	padding-top: 160px;
 }
 
 @media (max-width: 767px) {
