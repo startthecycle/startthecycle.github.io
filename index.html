@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
 	<title>Start The Cycle</title> 
-	<meta name="description" content="Start the Cycle is a social entrepreneurship venture founded by two McMaster Students – PhD Candidate Charles Burke and Masters of Science Candidate Justin Hall – each with research interests that fall in the field of transportation planning for active mobility." />
+	<meta name="description" content="Start the Cycle is a social entrepreneurship venture aimed at providing universal access to bicycles for children." />
 
 	<meta name="keywords" content="bikeshare, hamilton, cycling">
 	<!--<meta property="og:title" content="">-->
@@ -87,7 +87,7 @@
 			</div><!-- /row -->
 			<div class="row subtitle-row">
 				<!-- <div class="col-sm-1 hidden-sm">&nbsp;</div> -->
-				<div class="col-12 col-sm-12 font-light" style='font-size:22px;'>Start the Cycle is a social entrepreneurship venture founded by two McMaster Students – PhD Candidate Charles Burke and Masters of Science Candidate Justin Hall – each with research interests that fall in the field of transportation planning for active mobility. In short Start the Cycle operates a non-profit ‘bike share’ program for school aged children between the ages of 5 and 15 based on the same for profit bike share model used to promote bicycle use for transport in cities across Canada and the United States. The 2015 Pan American games Cannon Street bike path project provides an ideal opportunity to form a pilot project for Start the Cycle as it coincides with available funding and existing new infrastructure plans.</div>
+				<div class="col-12 col-sm-12 font-light" style='font-size:22px;'>Start the Cycle is a social entrepreneurship venture founded by two McMaster Students – PhD Candidate Charles Burke and Masters of Science Candidate Justin Hall – each with research interests that fall in the field of transportation planning for active mobility. In short Start the Cycle operates a non-profit ‘bike share’ program for school aged children between the ages of 5 and 15 based on the same <em>for</em> profit bike share model used to promote bicycle use for transport in cities across Canada and the United States. The 2015 Pan American games Cannon Street bike path project provides an ideal opportunity to form a pilot project for Start the Cycle as it coincides with available funding and existing new infrastructure plans.</div>
 				<!-- <div class="col-sm-1 hidden-sm">&nbsp;</div> -->
 			</div><!-- /row -->
 			<div class="row content-row">
@@ -192,7 +192,7 @@
 			<div class="row">
 
               <div class="col-12 col-sm-4 with-hover-text">
-	                <a target="_blank" href="http://www.hamilton.ca/index.htm" class="thumbnail">
+	                <a target="_blank" href="http://www.hamilton.ca/index.htm" class="image">
 	                  <img src="images/logo/hamilton_city.jpg" alt="client1" style="max-height: 150px; max-width: 150px;" >
 	                </a>
 	              </div>
@@ -203,7 +203,7 @@
 	              </div>
 	              <div class="col-12 col-sm-4 with-hover-text">
 	                <a target="_blank" href="http://mcmasterinnovationpark.ca" class="thumbnail">
-	                  <img src="images/logo/mip.gif" alt="" style="max-height: 250px;">
+	                  <img src="images/logo/mip.gif" alt="" style="max-height: 250px; padding-top:60px;">
 	                </a>
 	               </div>
               </div>
@@ -217,19 +217,25 @@
 
 	              <div class="col-12 col-sm-4 with-hover-text">
 	                <a target="_blank" href="http://www.mcmaster.ca" class="thumbnail">
-	                  <img src="images/logo/McMasterLogo.jpg" alt="..." style="max-height: 150px; width: 200px;" >
+	                  <img src="images/logo/McMasterLogo.jpg" alt="..." style="max-height: 150px; width: 200px;padding-top:40px;" >
 	                </a>
 	              </div>
 	              <div class="col-12 col-sm-4 with-hover-text">
 	                <a target="_blank" href="http://ontariotrailscouncil.tumblr.com/post/56974631651/hamilton-burlington-trails-council" class="thumbnail">
-	                  <p class='font-thin' style='color:#2f2f2f; font-size:30px;'>Hamilton-Burlington<br>Trails Council</p>
+	                  <p class='font-thin' style='color:#2f2f2f; font-size:30px;padding-top:40px;'>Hamilton-Burlington<br>Trails Council</p>
 	                </a>
 	              </div>
+	        </div>
+
+	        <div class="row-fluid">
+
+	        <div class="col-sm-4 hidden-sm">&nbsp;</div>
 	              <div class="col-12 col-sm-4 with-hover-text">
 	                <a target="_blank" href="http://rmdk.ca" class="thumbnail">
-	                  <img src="images/logo/rmdk.png" alt="..." style="max-height: 150px; width: 200px;" >
+	                  <img src="images/logo/rmdk.png" alt="..." style="max-height: 100px; max-width:150px;" >
 	                </a>
 	              </div>
+	        <div class="col-sm-4 hidden-sm">&nbsp;</div>
             </div>
 				
 		</div><!-- /container -->
@@ -372,7 +378,35 @@
 	<script src="js/map.js"></script>
 	<!-- <script type="text/javascript" src="fancybox/jquery.fancybox.pack-v=2.1.5.js"></script> -->
 
-	
+<!-- Enable scrolling past the map on smalls screens -->
 
+<script type="text/javascript">
+jQuery(function(){
+	var windowWidth = jQuery(window).width();
+	if (windowWidth <= 640) {
+		jQuery('#map').css({
+            	'width' 		: '80%',
+            	'margin-left' 	: 'auto',
+            	'margin-right' 	: 'auto'
+     	});
+    }
+	jQuery(window).on('resize', function(){
+    	var win = jQuery(this); //this = window
+    	if (win.width() <= 640) {
+       		jQuery('#map').css({
+            	'width' 		: '80%',
+            	'margin-left' 	: 'auto',
+            	'margin-right' 	: 'auto'
+     		});
+        }
+		else {
+			jQuery('#map').css({
+				'width' 		: '100%'
+     		});
+		}
+    });
+});
+
+</script>
 
 </html>

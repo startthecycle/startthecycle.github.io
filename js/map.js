@@ -13,7 +13,7 @@ function initmap() {
 	var osm = new L.TileLayer(osmUrl, {minZoom: 12, maxZoom: 18, attribution: osmAttrib});		
 
 	// start the map in South-East England
-	map.setView(new L.LatLng(43.260454, -79.865956), 16);
+	map.setView(new L.LatLng(43.260454, -79.865956), 15);
 	map.addLayer(osm);
 
 	map.scrollWheelZoom.disable();
@@ -27,7 +27,7 @@ function initmap() {
 	var firstpolyline = new L.Polyline(pointList, {
 	color: 'black',
 	weight: 9,
-	opacity: 0.35,
+	opacity: 0.4,
 	smoothFactor: 1
 
 	});
@@ -35,3 +35,29 @@ function initmap() {
 }
 
 initmap();
+
+jQuery(function(){
+	var windowWidth = jQuery(window).width();
+	if (windowWidth <= 640) {
+		jQuery('div.map').css({
+            	'width' 		: '90%',
+            	'margin-left' 	: 'auto',
+            	'margin-right' 	: 'auto'
+     	});
+    }
+	jQuery(window).on('resize', function(){
+    	var win = jQuery(this); //this = window
+    	if (win.width() <= 640) {
+       		jQuery('div.map').css({
+            	'width' 		: '90%',
+            	'margin-left' 	: 'auto',
+            	'margin-right' 	: 'auto'
+     		});
+        }
+		else {
+			jQuery('div.map').css({
+				'width' 		: '100%'
+     		});
+		}
+    });
+});
