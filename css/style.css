@@ -1,3 +1,7 @@
+.leaflet-popup-content{
+	color:black;
+}
+
 #map { 
 	height: 380px; 
 }
