@@ -37,8 +37,9 @@ var map = L.map('map', { zoomControl:true }).fitBounds([[43.2404867495,-79.87773
 			var exp_hamiltonkidscannonJSON = new L.geoJson(exp_hamiltonkidscannon,{
 				onEachFeature: pop_hamiltonkidscannon,
 				style: function (feature) {
-					return {weight:1,
-							color: feature.properties.color_qgis2leaf,
+					return {weight:0.5,
+							color: 'black',
+							fillColor: feature.properties.color_qgis2leaf,
 							opacity: feature.properties.transp_qgis2leaf,
 							fillOpacity: feature.properties.transp_fill_qgis2leaf};
 					}
